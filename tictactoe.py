@@ -59,6 +59,10 @@ def check_board(board):
         return X_WIN
     elif [O, O, O] in lst:
         return O_WIN
+    elif E not in [y for x in board for y in x]:
+        return DRAW
+    else:
+        return CONTINUE
 
 
 def run_game():
@@ -69,4 +73,4 @@ if __name__ == "__main__":
     #run_game()
     #print update_board(X, 0, 0, [[X, E, O], [E, E, E], [O, E, X]])
     #print_board([[X, E, O], [E, E, E], [O, E, X]])
-    print check_board([[X, E, O], [X, E, O], [E, E, O]])
+    print check_board([[O, X, O], [X, O, E], [X, O, X]])
