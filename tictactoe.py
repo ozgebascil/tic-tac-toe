@@ -27,10 +27,12 @@ def get_input(symbol):
     return x, y
 
 
-def update_board(symbol, coord, board):
-    print symbol
-    print coord
-    print board
+def update_board(symbol, x, y, board):
+
+    if board[x][y] == E:
+        board[x][y] = symbol
+        return board
+    raise ValueError
 
 
 def print_board(board):
@@ -46,5 +48,5 @@ def run_game():
 
 if __name__ == "__main__":
     #run_game()
-    #print update_board(X, [1, 2], [[X, E, O], [E, E, E], [O, E, X]])
-    print_board([[X, E, O], [E, E, E], [O, E, X]])
+    print update_board(X, 0, 0, [[X, E, O], [E, E, E], [O, E, X]])
+    #print_board([[X, E, O], [E, E, E], [O, E, X]])
