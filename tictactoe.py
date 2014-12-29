@@ -1,6 +1,6 @@
-X = 'x'
-O = 'o'
-E = 'e'
+X = 'X'
+O = 'O'
+E = '_'
 
 
 def get_input(symbol):
@@ -27,6 +27,18 @@ def get_input(symbol):
     return x, y
 
 
+def update_board(symbol, coord, board):
+    print symbol
+    print coord
+    print board
+
+
+def print_board(board):
+
+    for row in board:
+        print " ".join(row)
+
+
 
 def run_game():
     print "GAME"
@@ -34,4 +46,5 @@ def run_game():
 
 if __name__ == "__main__":
     #run_game()
-    print get_input(X)
+    #print update_board(X, [1, 2], [[X, E, O], [E, E, E], [O, E, X]])
+    print_board([[X, E, O], [E, E, E], [O, E, X]])
