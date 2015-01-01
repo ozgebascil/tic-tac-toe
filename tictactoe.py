@@ -81,8 +81,4 @@ def run_game(symbol, board):
 
 
 if __name__ == "__main__":
-    #run_game()
-    #print update_board(X, 0, 0, [[X, E, O], [E, E, E], [O, E, X]])
-    #print_board([[X, E, O], [E, E, E], [O, E, X]])
-    #print check_board([[O, X, O], [X, O, E], [X, O, X]])
     run_game(X, [[E, E, E], [E, E, E], [E, E, E]])
